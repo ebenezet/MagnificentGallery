@@ -8,7 +8,7 @@ import './App.css'
 export default function App() {
 const [images, displayImages] = useState([])
 let [currentIndex, setCurrentIndex] = useState(0)
-const[popup, setPopup] = useState(false)
+const[isVisible, setIsVisible] = useState(false)
 
 
   useEffect( ()=> {
@@ -42,8 +42,10 @@ return (
       <h1> Magnifica Gallery</h1>
         {images.map((image, index) => (
           <div key={index} className='images'>
-          <img key={image.id} src={image.url} alt={image.alt} index={index} onClick={()=> setPopup(!popup)} />
-          </div>)
+        <button onClick={()=> setIsVisible(!isVisible)}>  <img key={image.id} src={image.url} alt={image.alt} index={index}  /> </button>
+         {isVisible && <img key={image.id} src={image.url} alt={image.alt}/>}
+          </div>
+          )
           ) }
        <div className='left-right-button'>
         <button className='right' onClick={()=> <OncClickForward/>}>Right</button>
