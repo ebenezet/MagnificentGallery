@@ -2,6 +2,6 @@
 export default function OnClickBackward(){
     
     return 
-        index !== 0 ? 
-        setIndex(index - 1) : setIndex(index = images.length - 1)
+        currentIndex !== 0 ? 
+        setCurrentIndex(currentIndex - 1) : setCurrentIndex(currentIndex = images.length - 1)
 }

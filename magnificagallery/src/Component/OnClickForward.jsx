@@ -3,8 +3,8 @@ export default function OncClickForward () {
 
    return  
 
-    index !== images.length -1 ? 
-        setIndex(index + 1) : setIndex(index = 0)
+    currentIndex !== images.length -1 ? 
+        setCurrentIndex(currentIndex + 1) : setCurrentIndex(currentIndex = 0)
 
         
 }

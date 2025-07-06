@@ -8,7 +8,7 @@ import OnClickBackward from './Component/OnClickBackward'
 
 export default function App() {
 const [images, displayImages] = useState([])
-const [index, setIndex] = useState(0)
+let [currentIndex, setCurrentIndex] = useState(0)
 
 
   useEffect( ()=> {
@@ -22,8 +22,17 @@ async function fetchData(){
 
 fetchData() } , [])
 
+function OncClickForward () {
 
+currentIndex !== images.length -1 ? 
+setCurrentIndex(currentIndex + 1) : setCurrentIndex(index = 0)
+}
 
+function OnClickBackward(){
+  
+  currentIndex !== 0 ? 
+  setCurrentIndex(currentIndex - 1) : setCurrentIndex(currentIndex = images.length - 1)
+}
 
 
 return (
