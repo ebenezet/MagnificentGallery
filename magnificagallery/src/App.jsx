@@ -8,8 +8,8 @@ import OnClickBackward from './Component/OnClickBackward'
 
 export default function App() {
 const [images, displayImages] = useState([])
-const [currentIndex, setCurrentIndex] = useState(0)
-let currentImage = images[currentIndex]
+const [index, setIndex] = useState(0)
+
 
   useEffect( ()=> {
 async function fetchData(){
@@ -22,9 +22,7 @@ async function fetchData(){
 
 fetchData() } , [])
 
-function CreateBigImage(CurrentIndex){
- currentIndex=index
-}
+
 
 
 
