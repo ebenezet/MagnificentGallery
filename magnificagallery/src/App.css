@@ -13,12 +13,12 @@ img{
 
 .right{
   display:flex;
-  background-color: tomato;
+  background-color: aqua;
 }
 
 .left{
   display:flex;
-  background-color: tomato;
+  background-color: aqua;
 }
 
 .right:hover{
