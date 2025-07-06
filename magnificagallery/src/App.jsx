@@ -2,13 +2,13 @@
 import { useEffect, useState } from 'react'
 
 import './App.css'
-import OncClickForward from './Component/OnClickForward'
-import OnClickBackward from './Component/OnClickBackward'
+
 
 
 export default function App() {
 const [images, displayImages] = useState([])
 let [currentIndex, setCurrentIndex] = useState(0)
+const[popup, setPopup] = useState(false)
 
 
   useEffect( ()=> {
@@ -23,25 +23,31 @@ async function fetchData(){
 fetchData() } , [])
 
 function OncClickForward () {
-
-currentIndex !== images.length -1 ? 
+ return currentIndex !== images.length -1 ? 
 setCurrentIndex(currentIndex + 1) : setCurrentIndex(index = 0)
 }
 
+OnClickBackward
 function OnClickBackward(){
   
-  currentIndex !== 0 ? 
+  return currentIndex !== 0 ? 
   setCurrentIndex(currentIndex - 1) : setCurrentIndex(currentIndex = images.length - 1)
 }
+OnClickBackward
+
 
 
 return (
     <div className='MyGallery'>
       <h1> Magnifica Gallery</h1>
-        {images.map((image, index) => <img key={image.id} src={image.url} alt={image.alt}/>) }
+        {images.map((image, index) => (
+          <div key={index} className='images'>
+          <img key={image.id} src={image.url} alt={image.alt} index={index} onClick={()=> setPopup(!popup)} />
+          </div>)
+          ) }
        <div className='left-right-button'>
-        <button onClick={()=> <OncClickForward/>}>Right</button>
-        <button onClick={()=> <OnClickBackward/>}>Left</button>
+        <button className='right' onClick={()=> <OncClickForward/>}>Right</button>
+        <button className='left' onClick={()=> <OnClickBackward/>}>Left</button>
         </div>
     </div>
 )

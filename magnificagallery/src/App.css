@@ -7,6 +7,32 @@ body {
 img{
   display:flex;
   flex-direction:row;
-  width:auto;
+  width: 10rem;
   height:20vh
+}
+
+.right{
+  display:flex;
+  background-color: tomato;
+}
+
+.left{
+  display:flex;
+  background-color: tomato;
+}
+
+.right:hover{
+  background-color: green;
+}
+
+.left:hover{
+  background-color: green;
+}
+
+.left-right-button{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  
 }
