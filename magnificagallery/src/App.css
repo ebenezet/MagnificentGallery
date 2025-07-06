@@ -1,0 +1,12 @@
+body {
+  display:flex;
+  flex-direction: row;
+  
+}
+
+img{
+  display:flex;
+  flex-direction:row;
+  width:auto;
+  height:20vh
+}

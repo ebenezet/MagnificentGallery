@@ -1,0 +1,8 @@
+
+img{
+
+    display:flex;
+    flex-direction: row;
+    width:auto;
+    height:15vh
+}
